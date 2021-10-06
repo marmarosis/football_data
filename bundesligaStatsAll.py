@@ -57,7 +57,7 @@ for anchor in soup.find_all(href=season_stats):
     time.sleep(0.2)
 
 # write the scraped data to an Excel file
-with pd.ExcelWriter('C:\\Users\\freddie.barnes.OCEAN\\Downloads\\bundesliga_stats.xlsx') as writer:
+with pd.ExcelWriter('bundesliga_stats.xlsx') as writer:
     df_scores_for.to_excel(writer, sheet_name="stats-for")
     df_scores_against.to_excel(writer, sheet_name="stats-against")
 print('For/against stats written to file!')
